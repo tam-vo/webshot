@@ -45,7 +45,7 @@ module Webshot
         sleep opts[:timeout] if opts[:timeout]
 
         # Check response code
-        if page.driver.status_code == 200
+        if true || page.driver.status_code == 200
           tmp = Tempfile.new(["webshot", ".png"])
           tmp.close
           begin
